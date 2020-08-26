@@ -1,0 +1,18 @@
+function f (ps : {float}, pi : {integer}) : integer
+  local i : integer = pi[0]
+  ps = {};
+  local j : integer = pi[0];
+  return i + j 
+end
+--[[
+    
+Since ps and pi can not be aliased, the store through ps can not change the object pointed to by pi, and the second reference to the object pointed to by pi can be eliminated, as shown below.
+
+void f (short *ps, int *pi)
+{
+  int i, j;
+  i = *pi;
+  *ps = 3;
+  g (i, i);
+}
+--]]

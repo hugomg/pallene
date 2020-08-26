@@ -1,0 +1,51 @@
+local function Int() : integer
+    return 5
+end
+
+export function ints() : integer
+    local b = Int()
+    local c = Int()
+    local g = 1
+    local e = 2
+    local a = b * c + g;
+    local d = b * c * e;
+    return a + d
+end
+
+local function String() : string
+    return "ola"
+end
+
+export function strings() : string
+    local b = String()
+    local c = String()
+    local g = "a"
+    local e = "b"
+    local a = b .. c .. g;
+    local d = b .. c .. e;
+    return a .. d
+end
+
+local x = 5
+
+export function upvaluesInt() : integer
+    local b = x
+    local c = x
+    local g = 4
+    local e = 3
+    local a = b * c + g;
+    local d = b * c + e;
+    return a + d
+end
+
+local y = "aa"
+
+export function upvaluesString() : string
+    local b = y
+    local c = y
+    local g = "a"
+    local e = "b"
+    local a = b .. c .. g;
+    local d = b .. c .. e;
+    return a .. d
+end

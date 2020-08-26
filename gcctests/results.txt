@@ -1,0 +1,56 @@
+constant 
+
+simple
+0,035616 +- 0,000824 seconds time elapsed  ( +-  2,31% )
+0,035158 +- 0,000545 seconds time elapsed  ( +-  1,55% )
+
+table
+0,149058 +- 0,000903 seconds time elapsed  ( +-  0,61% )
+0,14863 +- 0,00110 seconds time elapsed  ( +-  0,74% )
+
+if
+0,034957 +- 0,000557 seconds time elapsed  ( +-  1,59% )
+0,035073 +- 0,000532 seconds time elapsed  ( +-  1,52% )
+
+if cond
+0,034743 +- 0,000518 seconds time elapsed  ( +-  1,49% )
+0,035891 +- 0,000662 seconds time elapsed  ( +-  1,85% )
+
+loop
+0,04215 +- 0,00268 seconds time elapsed  ( +-  6,37% )
+0,037555 +- 0,000588 seconds time elapsed  ( +-  1,57% )
+
+call
+0,038935 +- 0,000951 seconds time elapsed  ( +-  2,44% )
+0,038012 +- 0,000667 seconds time elapsed  ( +-  1,76% )
+
+upvalue
+0,04013 +- 0,00143 seconds time elapsed  ( +-  3,56% )
+0,038455 +- 0,000935 seconds time elapsed  ( +-  2,43% )
+
+string
+0,04219 +- 0,00102 seconds time elapsed  ( +-  2,42% )
+0,040829 +- 0,000616 seconds time elapsed  ( +-  1,51% )
+
+CSE
+
+ints
+0,03539 +- 0,00118 seconds time elapsed  ( +-  3,32% )
+0,035418 +- 0,000551 seconds time elapsed  ( +-  1,55% )
+
+strings 
+0,20789 +- 0,00206 seconds time elapsed  ( +-  0,99% )
+0,23640 +- 0,00113 seconds time elapsed  ( +-  0,48% )
+
+int upvalue
+0,0468 +- 0,0119 seconds time elapsed  ( +- 25,49% )
+0,035140 +- 0,000745 seconds time elapsed  ( +-  2,12% )
+
+string upvalue
+0,19454 +- 0,00277 seconds time elapsed  ( +-  1,42% )
+0,19963 +- 0,00337 seconds time elapsed  ( +-  1,69% )
+
+LI
+
+0,34790 +- 0,00185 seconds time elapsed  ( +-  0,53% )
+0,3630 +- 0,0116 seconds time elapsed  ( +-  3,20% )

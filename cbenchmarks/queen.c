@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-int isplaceok(int *a, int n, int c)
+int isplaceok(size_t *a, size_t n, size_t c)
 {
-    for (int i = 0; i < n; i++) {
+    for (size_t i = 0; i < n; i++) {
         int d = a[i];
         if (
             (d == c) ||
@@ -17,10 +17,10 @@ int isplaceok(int *a, int n, int c)
     return 1;
 }
 
-void printsolution(int N, int *a)
+void printsolution(size_t N, size_t *a)
 {
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < N; j++) {
+    for (size_t i = 0; i < N; i++) {
+        for (size_t j = 0; j < N; j++) {
             if (a[i] == j) {
                 putchar('X');
             } else {
@@ -33,12 +33,12 @@ void printsolution(int N, int *a)
     putchar('\n');
 }
 
-void addqueen(int N, int *a, int n)
+void addqueen(size_t N, size_t *a, size_t n)
 {
     if (n >= N) {
         printsolution(N, a);
     } else {
-        for (int c = 0; c < N; c++) {
+        for (size_t c = 0; c < N; c++) {
             if (isplaceok(a, n, c)) {
                 a[n] = c;
                 addqueen(N, a, n+1);
@@ -47,23 +47,23 @@ void addqueen(int N, int *a, int n)
     }
 }
 
-void nqueens(int N)
+void nqueens(size_t N)
 {
-    int *a = malloc(N * sizeof(*a));
+    size_t *a = malloc(N * sizeof(size_t));
     addqueen(N, a, 0);
     free(a);
 }
 
 int main(int argc, char **argv)
 {
-    int N = 13;
+    size_t N = 13;
     if (argc > 1) {
-        int nread = sscanf(argv[1], "%d", &N);
+        int nread = sscanf(argv[1], "%zu", &N);
         if (nread != 1) return 1;
     }
 
     //
 
-    nqueens(N);
+    nqueens(13);
     return 0;
 }

@@ -1,0 +1,18 @@
+address      & YES & -- & X \\ \hline
+alias const  & NO & NO & X \\ \hline 
+alias addres & NO & NO & X \\ \hline
+alias type   & NO & NO & X \\ \hline
+array bounds & NO & NO & X \\ \hline
+array bounds simple & NO & NO & X \\ \hline
+branch elimination simple & YES & -- & X \\ \hline
+branch elimination const prop & NO & YES & X \\ \hline
+loop collapsing simple  & NO & YES & X \\ \hline
+loop collapsing medium  & NO & NO & X \\ \hline
+loop collapsing complex & NO & NO & X \\ \hline
+instruction combining   & NO & YES & X \\ \hline
+const prop simple & NO & YES & X \\ \hline
+const prop control & NO & YES & X \\ \hline
+const prop alias & NO & YES & X \\ \hline
+CSE & NO & YES & X \\ \hline
+
+bitfield TODO https://compileroptimizations.com/category/bitfield_optimization.htm

@@ -7,8 +7,8 @@ typedef struct {
     double x, y, z, vx, vy, vz, mass;
 } Body;
 
-#define PI             3.141592653589793
-#define SOLAR_MASS     (4.0 * PI * PI)
+#define PI 3.141592653589793
+#define SOLAR_MASS 4.0 * PI * PI
 #define DAYS_PER_YEAR  365.24
 
 #define nbodies 5

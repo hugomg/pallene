@@ -1,0 +1,28 @@
+function simple() : integer
+    local x = 3
+    local y = x + 4
+    return y
+end
+
+function control() : integer
+    local x = 3
+    local y = 0
+    if x < 5 then
+        y = x + 4
+    else
+        y = x + 5
+    end
+    return y
+end
+
+function alias() : integer
+    local x = 3
+    local z = x
+    local y = 0
+    if x < 5 then
+        y = z + 4
+    else
+        y = z + 5
+    end
+    return y
+end

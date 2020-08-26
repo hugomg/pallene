@@ -1,0 +1,32 @@
+
+
+local const_array : {integer} = {1,2,3}
+
+function f (p : {integer}, i : integer) : integer
+  local x : integer = 0
+  local y : integer = 0 
+  local q : {integer} = const_array
+  x = q[i]
+  p = {}
+  y = q[i]
+  return x + y
+end
+--[[
+Since p is not an alias for q, the second reference to the object pointed to by q can be eliminated, as shown below.
+
+const int const_array[];
+
+void f (int *p, int i)
+{
+  int x, y;
+  const int *q = &const_array[i];
+  x = *q;
+  *p = 5;
+  return x + x
+}
+--]]
+function test (n : integer)
+  for i=0,n do
+    f({1,2,3},1)
+  end
+end

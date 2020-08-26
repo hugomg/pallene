@@ -7,8 +7,8 @@ local GLIDER = {
     { 0,1,1, }
 }
 
-local N = 40
-local M = 80
+local N = 50
+local M = 100
 
 local curr_cells = life.new_canvas(N, M)
 local next_cells = life.new_canvas(N, M)

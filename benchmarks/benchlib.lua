@@ -1,4 +1,4 @@
-local chronos = require "chronos"
+--local chronos = require "chronos"
 local util = require "pallene.util"
 
 local benchlib = {}
@@ -32,7 +32,7 @@ function benchlib.prepare_benchmark(lua_path, benchmark_path, extra_params)
     if ext == "pln" or ext == "c" then
         local so_name = "benchmarks/" .. test_dir .. "/" .. basename .. ".so"
         assert(util.execute(string.format(
-            "make --quiet -f benchmarks/Makefile %s",
+            "make --quiet -f benchmarks/makefile %s",
             util.shell_quote(so_name))))
     elseif ext == "lua" then
         -- Nothing to do
@@ -118,7 +118,7 @@ benchlib.modes.chronos = {
 
 benchlib.modes.perf = {
     run = function (bench_cmd)
-        local measure_cmd = string.format("env LC_ALL=C perf stat -d -- %s", bench_cmd)
+        local measure_cmd = string.format("env LC_ALL=C perf stat -r 10 -d -- %s", bench_cmd)
         local ok, err, _, res = util.outputs_of_execute(measure_cmd)
         assert(ok, err)
         return res

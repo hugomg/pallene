@@ -1,0 +1,47 @@
+export function new(x: float, y: float): {float}
+    return { x, y }
+end
+
+export function clone(x: {float}): {float}
+    return new(x[1], x[2])
+end
+
+export function conj(x: {float}): {float}
+    return new(x[1], -x[2])
+end
+
+export function add(x: {float}, y: {float}): {float}
+    return new(x[1] + y[1], x[2] + y[2])
+end
+
+export function mul(x: {float}, y: {float}): {float}
+    return new(x[1] * y[1] - x[2] * y[2], x[1] * y[2] + x[2] * y[1])
+end
+
+export function norm2(x: {float}): float
+    local n = mul(x, conj(x))
+    return n[1]
+end
+export function all(N: integer)
+    local xmin = -2.0
+    local xmax = 2.0
+    local ymin = -2.0
+    local ymax = 2.0
+
+    local dx = (xmax - xmin) / N
+    local dy = (ymax - ymin) / N
+
+    for i = 1, N do
+        local x = xmin + (i - 1) * dx
+        for j = 1, N do
+            local y = ymin + (j - 1) * dy
+            local c = new(x, y)
+            local z = clone(c)
+            local l = 0
+            repeat
+                z = add(mul(z, z), c)
+                l = l + 1
+            until norm2(z) > 4.0 or l > 255
+        end
+    end
+end

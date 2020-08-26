@@ -1,0 +1,29 @@
+export function new(x: float, y: float): {float}
+    return { x, y }
+end
+
+export function centroid(points: {{float}}, nrep: integer): {float}
+    local x = 0.0
+    local y = 0.0
+    local npoints = #points
+    for _ = 1, nrep do
+        x = 0.0
+        y = 0.0
+        for i = 1, npoints do
+            local p = points[i]
+            x = x + p[1]
+            y = y + p[2]
+        end
+    end
+    return { x / npoints, y / npoints }
+end
+
+export function all(N : integer, nrep : integer) : {float}    
+   local arr : {{float}}= {}
+    for i = 1, N do
+        local d = i * 3.1415
+        arr[i] = new(d, d)
+    end
+
+    return centroid(arr, nrep)
+end

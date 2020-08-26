@@ -1,0 +1,15 @@
+function f() : integer
+    if true then
+        return 0
+    else
+        return 1
+    end
+end
+function g() : integer
+    local a = 5
+    if a > 3 then
+        return 0
+    else
+        return 1
+    end
+end

@@ -1,0 +1,6 @@
+function f()
+    local p : {integer} = {1,2,4}
+    local unused  = p[1]
+    local unused2  = p[2]
+    return
+end

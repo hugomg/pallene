@@ -1,0 +1,4 @@
+function f()
+    local p : {integer} = {1,2,4}
+    return
+end

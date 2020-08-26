@@ -1,0 +1,23 @@
+local a = 0
+local b = 0
+local c = 0
+
+function f() : integer
+  a = 3
+  b = 5
+  c = 7
+  return a+b+c
+end
+
+--[[
+  int __t1[3];               /* global pool for a, b, c */
+int *__t2 = &__t1[0];      /* pointer to global pool */
+
+void f (void)
+{
+  *__t2 = 3;               /* a = 3; */
+  *(__t2 + 1) = 5;         /* b = 5; */
+  *(__t2 + 2) = 7;         /* c = 7; */
+  return;
+}
+--]]

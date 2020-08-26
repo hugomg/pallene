@@ -1,0 +1,29 @@
+local a : {integer} = {}
+local b : {integer} = {}
+
+function f (i : integer, j : integer)
+  local y = 0
+  local x = 0
+  local p : {integer} = a
+  local q : {integer} = b
+  x = q[3]
+  p = {}
+  y = p[3]
+  f(x, y)
+end
+
+--[[
+  int a[], b[];
+
+void f(int i, int j)
+{
+  int *p, *q;
+  int x, y;
+  p = &a[i];
+  q = &b[j];
+  x = *(q + 3);
+  *p = 5;
+  f (x, x);
+}
+  
+--]]

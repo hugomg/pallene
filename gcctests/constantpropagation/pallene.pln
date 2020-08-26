@@ -1,0 +1,60 @@
+export function simple() : integer
+    local x = 5
+    local y = 3 + x
+    return y
+end
+
+export function table() : {integer}
+    local x : {integer} = {1,2}
+    local y = x
+    return y
+end
+export function String() : string
+    local x = "abc"
+    local y = x
+    return y
+end
+
+export function withif() : integer
+    local x = 5
+    local y = 0
+    if true then
+        y = 3 + x
+    end
+    return y
+end
+
+export function withifcond() : integer
+    local x = 5
+    local y = 0
+    if x>3 then
+        y = 3 + x
+    end
+    return y
+end
+
+export function withloop() : integer
+    local x = 5
+    local i =0
+    while(i<10) do
+        x = 5
+        i = i + 1
+    end
+    local y = 3 + x
+    return y
+end
+
+local function f() : integer return 5 end
+
+export function withcall() : integer
+    local x = 3
+    local x = f()
+    local y = 3 + x
+    return y
+end
+
+local X = 5
+export function upvalue() : integer
+    local y = X + 3
+    return y
+end

@@ -1,0 +1,5 @@
+function f()
+    local x = {1,2}
+    local y = x[1] + x[2]
+    return y
+end

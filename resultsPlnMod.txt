@@ -1,0 +1,160 @@
+binarytrees
+1 reuse of slot via CSE
+3 unification of renormalize
+3 renormalize after creation elimination
+4 barrier check elimination
+0,003567 +- 0,000227 seconds time elapsed  ( +-  6,36% )
+0,002741 +- 0,000117 seconds time elapsed  ( +-  4,26% )
+
+binsearch
+1 range analysis removing renormalize
+1,8167 +- 0,0375 seconds time elapsed  ( +-  2,06% )
+1,7988 +- 0,0235 seconds time elapsed  ( +-  1,31% )
+
+centroid
+1 hoist by range analysis
+2 renormalize after creation elimination
+3 unification of renormalize
+8,838 +- 0,288 seconds time elapsed  ( +-  3,26% )
+7,660 +- 0,198 seconds time elapsed  ( +-  2,58% )
+
+conway 
+14 hoist 
+6 unifications
+4,2379 +- 0,0921 seconds time elapsed  ( +-  2,17% )
+3,828 +- 0,107 seconds time elapsed  ( +-  2,79% )
+
+matmul
+4 hoist
+1 cse slot
+5,632 +- 0,274 seconds time elapsed  ( +-  4,86% )
+4,549 +- 0,245 seconds time elapsed  ( +-  5,39% )
+
+matmulsum
+3 hoist
+0,44414 +- 0,00408 seconds time elapsed  ( +-  0,92% )
+0,37722 +- 0,00115 seconds time elapsed  ( +-  0,30% )
+
+nbody
+1 for hoist
+2 const hoist
+2 unification
+0,003834 +- 0,000665 seconds time elapsed  ( +- 17,35% )
+0,002963 +- 0,000432 seconds time elapsed  ( +- 14,59% )
+
+mandelbrot
+5,2840 +- 0,0569 seconds time elapsed  ( +-  1,08% )
+5,2591 +- 0,0665 seconds time elapsed  ( +-  1,26% )
+
+
+==================== 
+title
+lua
+pln
+plnmod
+luajit
+c-api
+
+binarytrees
+0,004540
+0,002693
+0,002587
+0,003524
+0,005213
+
+binsearch
+19,483
+1,72775
+1,65695
+5,73427
+7,12974
+
+
+centroid
+33,6205
+7,31610
+6,76628 
+5,02938
+49,292
+
+conway
+7,135
+3,53474
+3,48450
+7,6733
+6,0434
+
+============ 
+comparison lua, pln, luajit
+
+binarytrees
+0,004540
+0,002693
+0,003524
+
+binsearch
+19,483
+1,72775
+5,73427
+
+
+centroid
+33,6205
+7,31610
+5,02938
+
+conway
+7,135
+3,53474
+7,6733
+
+
+redux
+0,008131 
+0,002552 0,
+0,004260 0,
+
+fasta
+0,003119 
+0,002120 
+0,0020428 
+
+mandelbrot
+0,017726 0,
+0,004105 0,
+0,004289 0,
+
+matmul
+0,071965000
+0,023981000
+0,007992000
+
+matmulsum
+0,011988000
+0,003987000
+0,007948000
+
+nbody
+0,009015
+0,002207
+0,002836
+
+objmandelbrot
+10,412 
+8,075 
+0,5812 
+
+queen
+30,390 
+2,395 
+2,9218
+
+sieve
+9,11700 
+2,128777 
+2,4491 
+
+spectralnorm
+5,130
+0,20012 
+0,2137 
