@@ -10,6 +10,20 @@ name: Github Actions CI
 on: [ pull_request ]
 
 jobs:
+    lint:
+        name: Lint
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: leafo/gh-actions-lua@v8.0.0
+            - uses: leafo/gh-actions-luarocks@v4.0.0
+
+            - name: Install Luacheck
+            - run: luarocks install luacheck
+
+            - name: Run Luacheck
+              run: ./lint-project
+
     test:
         name: Test
         runs-on: ubuntu-latest
