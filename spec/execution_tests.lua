@@ -125,7 +125,7 @@ function execution_tests.run(compile_file, backend, _ENV, only_compile)
         end)
 
         it("integer", function()
-            run_test([[ assert(18 == test.f_integer()) ]])
+            run_test([[ assert(17 == test.f_integer()) ]])
         end)
 
         it("float", function()
