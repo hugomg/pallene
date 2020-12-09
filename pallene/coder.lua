@@ -27,7 +27,7 @@ end
 
 -- @param typ : types.T
 -- @returns the correspoinding C type, as a string.
-local function ctype(typ)
+local function ctype(typ, UNUSED)
     local tag = typ._tag
     if     tag == "types.T.Nil"      then return "int"
     elseif tag == "types.T.Boolean"  then return "char"
