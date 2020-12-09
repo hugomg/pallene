@@ -1,6 +1,4 @@
 # Pallene
-[![Build Status](https://travis-ci.org/pallene-lang/pallene.svg?branch=master)](https://travis-ci.org/pallene-lang/pallene)
-
 Pallene is a statically typed, ahead-of-time-compiled sister language to
 [Lua](https://www.lua.org), with a focus on performance. It is also a
 [friendly fork](http://lua-users.org/lists/lua-l/2018-09/msg00255.html) of the
