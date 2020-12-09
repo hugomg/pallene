@@ -5,13 +5,13 @@
 #   - https://github.com/leafo/gh-actions-lua
 #   - https://github.com/leafo/gh-actions-luarocks
 
-name: Continuous Integration Tests
+name: Github Actions CI
 
 on: [ pull_request ]
 
 jobs:
     test:
-        name: Github Actions / Test
+        name: Test
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
